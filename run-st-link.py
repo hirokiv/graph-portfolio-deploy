@@ -31,6 +31,9 @@ edge_styles = [
     for style in styles["edge_styles"]
 ]
 
+# Extract unique labels from edges
+unique_labels = set(edge["data"]["label"] for edge in elements["edges"])
+
 
 # Render the component
 st.markdown("### Graph Portfolio")
