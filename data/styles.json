@@ -1,0 +1,17 @@
+{
+    "node_styles": [
+        { "type": "PERSON", "color": "#FF7F3E", "attribute": "name", "icon": "person" },
+        { "type": "ORGANIZATION", "color": "#2A629A", "attribute": "name", "icon": "group" },
+        { "type": "PROJECT", "color": "#FFD700", "attribute": "name", "icon": "folder" },
+        { "type": "CATEGORY", "color": "#8A2BE2", "attribute": "name", "icon": "badge" },
+        { "type": "EVENT", "color": "#8A2BE2", "attribute": "name", "icon": "badge" },
+        { "type": "PUBLICATION", "color": "#8A2BE2", "attribute": "name", "icon": "badge" }
+    ],
+    "edge_styles": [
+        { "type": "FOLLOWS", "caption": "label", "directed": true },
+        { "type": "POSTED", "caption": "label", "directed": true },
+        { "type": "QUOTES", "caption": "label", "directed": true },
+        { "type": "EDUCATION", "caption": "label", "directed": true },
+        { "type": "RESEARCH", "caption": "label", "directed": true }
+    ]
+}
