@@ -6,9 +6,12 @@ from packages.kg.filter import filter_unrelated_nodes, filter_connected_componen
 st.set_page_config(layout="wide")
 
 # Load elements from graph_data.json
-graph_data_file = "data/graph_data.json"
-with open(graph_data_file, "r", encoding="utf-8") as f:
-    elements = json.load(f)
+# graph_data_file = "data/graph_data.json"
+# with open(graph_data_file, "r", encoding="utf-8") as f:
+#     elements = json.load(f)
+
+# Read TOML back as elements
+elements = st.secrets
 elements = filter_connected_component(elements, 1)
 
 # Load styles from styles.json
