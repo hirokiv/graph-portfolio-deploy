@@ -7,6 +7,10 @@ def convert_json_to_toml(json_file, toml_file):
     """
     with open(json_file, "r", encoding="utf-8") as f:
         data = json.load(f)
+    # Wrap the list in a dictionary with a key
+    if isinstance(data, list):
+        data = {"queries": data}
+
 
     with open(toml_file, "w", encoding="utf-8") as f:
         toml.dump(data, f)
@@ -27,8 +31,10 @@ def read_toml_as_elements(toml_file):
 # Example usage
 if __name__ == "__main__":
     # File paths
-    json_file = "data/graph_data.json"
-    toml_file = "data/graph_data.toml"
+    #json_file = "data/graph_data.json"
+    #toml_file = "data/graph_data.toml"
+    json_file = "data/query_results.json"
+    toml_file = "data/query_results.toml"
 
     # Convert JSON to TOML
     convert_json_to_toml(json_file, toml_file)
